@@ -1,0 +1,350 @@
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB01-FA27-CS-0801 ***
+ 
+############Step 1 for DB01-FA27-CS-0801 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB01-FA27-CS-0801" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB01-FA27-CS-0801" /D
+mountvol "E:\mnt_old\dbs\DB01-FA27-CS-0801" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG01-FA27-CS-0801" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG01-FA27-CS-0801" /D
+mountvol "E:\mnt_old\logs\LOG01-FA27-CS-0801" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 73
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB01-FA27-CS-0801
+FORMA FS=NTFS LABEL=DB01-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+sel dis 53
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG01-FA27-CS-0801
+FORMA FS=NTFS LABEL=LOG01-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB01-FA27-CS-0801 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB01-FA27-CS-0801\*  E:\mnt\dbs\DB01-FA27-CS-0801\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG01-FA27-CS-0801\*  E:\mnt\logs\LOG01-FA27-CS-0801\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB02-FA27-CS-0801 ***
+ 
+############Step 1 for DB02-FA27-CS-0801 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB02-FA27-CS-0801" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB02-FA27-CS-0801" /D
+mountvol "E:\mnt_old\dbs\DB02-FA27-CS-0801" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG02-FA27-CS-0801" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG02-FA27-CS-0801" /D
+mountvol "E:\mnt_old\logs\LOG02-FA27-CS-0801" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 74
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB02-FA27-CS-0801
+FORMA FS=NTFS LABEL=DB02-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+sel dis 54
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG02-FA27-CS-0801
+FORMA FS=NTFS LABEL=LOG02-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB02-FA27-CS-0801 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB02-FA27-CS-0801\*  E:\mnt\dbs\DB02-FA27-CS-0801\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG02-FA27-CS-0801\*  E:\mnt\logs\LOG02-FA27-CS-0801\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB03-FA27-CS-0801 ***
+ 
+############Step 1 for DB03-FA27-CS-0801 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB03-FA27-CS-0801" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB03-FA27-CS-0801" /D
+mountvol "E:\mnt_old\dbs\DB03-FA27-CS-0801" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG03-FA27-CS-0801" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG03-FA27-CS-0801" /D
+mountvol "E:\mnt_old\logs\LOG03-FA27-CS-0801" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 75
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB03-FA27-CS-0801
+FORMA FS=NTFS LABEL=DB03-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+sel dis 55
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG03-FA27-CS-0801
+FORMA FS=NTFS LABEL=LOG03-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB03-FA27-CS-0801 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB03-FA27-CS-0801\*  E:\mnt\dbs\DB03-FA27-CS-0801\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG03-FA27-CS-0801\*  E:\mnt\logs\LOG03-FA27-CS-0801\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB04-FA27-CS-0801 ***
+ 
+############Step 1 for DB04-FA27-CS-0801 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB04-FA27-CS-0801" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB04-FA27-CS-0801" /D
+mountvol "E:\mnt_old\dbs\DB04-FA27-CS-0801" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG04-FA27-CS-0801" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG04-FA27-CS-0801" /D
+mountvol "E:\mnt_old\logs\LOG04-FA27-CS-0801" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 76
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB04-FA27-CS-0801
+FORMA FS=NTFS LABEL=DB04-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+sel dis 56
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG04-FA27-CS-0801
+FORMA FS=NTFS LABEL=LOG04-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB04-FA27-CS-0801 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB04-FA27-CS-0801\*  E:\mnt\dbs\DB04-FA27-CS-0801\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG04-FA27-CS-0801\*  E:\mnt\logs\LOG04-FA27-CS-0801\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB05-FA27-CS-0801 ***
+ 
+############Step 1 for DB05-FA27-CS-0801 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB05-FA27-CS-0801" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB05-FA27-CS-0801" /D
+mountvol "E:\mnt_old\dbs\DB05-FA27-CS-0801" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG05-FA27-CS-0801" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG05-FA27-CS-0801" /D
+mountvol "E:\mnt_old\logs\LOG05-FA27-CS-0801" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 77
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB05-FA27-CS-0801
+FORMA FS=NTFS LABEL=DB05-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+sel dis 57
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG05-FA27-CS-0801
+FORMA FS=NTFS LABEL=LOG05-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB05-FA27-CS-0801 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB05-FA27-CS-0801\*  E:\mnt\dbs\DB05-FA27-CS-0801\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG05-FA27-CS-0801\*  E:\mnt\logs\LOG05-FA27-CS-0801\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB06-FA27-CS-0801 ***
+ 
+############Step 1 for DB06-FA27-CS-0801 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB06-FA27-CS-0801" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB06-FA27-CS-0801" /D
+mountvol "E:\mnt_old\dbs\DB06-FA27-CS-0801" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG06-FA27-CS-0801" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG06-FA27-CS-0801" /D
+mountvol "E:\mnt_old\logs\LOG06-FA27-CS-0801" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 78
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB06-FA27-CS-0801
+FORMA FS=NTFS LABEL=DB06-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+sel dis 58
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG06-FA27-CS-0801
+FORMA FS=NTFS LABEL=LOG06-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB06-FA27-CS-0801 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB06-FA27-CS-0801\*  E:\mnt\dbs\DB06-FA27-CS-0801\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG06-FA27-CS-0801\*  E:\mnt\logs\LOG06-FA27-CS-0801\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB07-FA27-CS-0801 ***
+ 
+############Step 1 for DB07-FA27-CS-0801 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB07-FA27-CS-0801" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB07-FA27-CS-0801" /D
+mountvol "E:\mnt_old\dbs\DB07-FA27-CS-0801" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG07-FA27-CS-0801" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG07-FA27-CS-0801" /D
+mountvol "E:\mnt_old\logs\LOG07-FA27-CS-0801" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 79
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB07-FA27-CS-0801
+FORMA FS=NTFS LABEL=DB07-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+sel dis 59
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG07-FA27-CS-0801
+FORMA FS=NTFS LABEL=LOG07-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB07-FA27-CS-0801 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB07-FA27-CS-0801\*  E:\mnt\dbs\DB07-FA27-CS-0801\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG07-FA27-CS-0801\*  E:\mnt\logs\LOG07-FA27-CS-0801\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB08-FA27-CS-0801 ***
+ 
+############Step 1 for DB08-FA27-CS-0801 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB08-FA27-CS-0801" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB08-FA27-CS-0801" /D
+mountvol "E:\mnt_old\dbs\DB08-FA27-CS-0801" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG08-FA27-CS-0801" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG08-FA27-CS-0801" /D
+mountvol "E:\mnt_old\logs\LOG08-FA27-CS-0801" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 80
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB08-FA27-CS-0801
+FORMA FS=NTFS LABEL=DB08-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+sel dis 60
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG08-FA27-CS-0801
+FORMA FS=NTFS LABEL=LOG08-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB08-FA27-CS-0801 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB08-FA27-CS-0801\*  E:\mnt\dbs\DB08-FA27-CS-0801\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG08-FA27-CS-0801\*  E:\mnt\logs\LOG08-FA27-CS-0801\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB09-FA27-CS-0801 ***
+ 
+############Step 1 for DB09-FA27-CS-0801 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB09-FA27-CS-0801" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB09-FA27-CS-0801" /D
+mountvol "E:\mnt_old\dbs\DB09-FA27-CS-0801" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG09-FA27-CS-0801" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG09-FA27-CS-0801" /D
+mountvol "E:\mnt_old\logs\LOG09-FA27-CS-0801" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 81
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB09-FA27-CS-0801
+FORMA FS=NTFS LABEL=DB09-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+sel dis 61
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG09-FA27-CS-0801
+FORMA FS=NTFS LABEL=LOG09-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB09-FA27-CS-0801 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB09-FA27-CS-0801\*  E:\mnt\dbs\DB09-FA27-CS-0801\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG09-FA27-CS-0801\*  E:\mnt\logs\LOG09-FA27-CS-0801\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB10-FA27-CS-0801 ***
+ 
+############Step 1 for DB10-FA27-CS-0801 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB10-FA27-CS-0801" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB10-FA27-CS-0801" /D
+mountvol "E:\mnt_old\dbs\DB10-FA27-CS-0801" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG10-FA27-CS-0801" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG10-FA27-CS-0801" /D
+mountvol "E:\mnt_old\logs\LOG10-FA27-CS-0801" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 82
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB10-FA27-CS-0801
+FORMA FS=NTFS LABEL=DB10-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+sel dis 62
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG10-FA27-CS-0801
+FORMA FS=NTFS LABEL=LOG10-FA27-CS-0801(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB10-FA27-CS-0801 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB10-FA27-CS-0801\*  E:\mnt\dbs\DB10-FA27-CS-0801\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG10-FA27-CS-0801\*  E:\mnt\logs\LOG10-FA27-CS-0801\ -verbose -recurse
+ 

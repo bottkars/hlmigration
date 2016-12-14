@@ -1,0 +1,6 @@
+sel dis 78
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB06-FA27-CS-0801
+FORMA FS=NTFS LABEL=DB06-FA27-CS-0801(VNX) UNIT=64k QUICK

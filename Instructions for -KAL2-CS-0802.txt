@@ -1,0 +1,350 @@
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB01-KAL2-CS-0802 ***
+ 
+############Step 1 for DB01-KAL2-CS-0802 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB01-KAL2-CS-0802" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB01-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\dbs\DB01-KAL2-CS-0802" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG01-KAL2-CS-0802" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG01-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\logs\LOG01-KAL2-CS-0802" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 63
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB01-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB01-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+sel dis 43
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG01-KAL2-CS-0802
+FORMA FS=NTFS LABEL=LOG01-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB01-KAL2-CS-0802 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB01-KAL2-CS-0802\*  E:\mnt\dbs\DB01-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG01-KAL2-CS-0802\*  E:\mnt\logs\LOG01-KAL2-CS-0802\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB02-KAL2-CS-0802 ***
+ 
+############Step 1 for DB02-KAL2-CS-0802 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB02-KAL2-CS-0802" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB02-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\dbs\DB02-KAL2-CS-0802" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG02-KAL2-CS-0802" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG02-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\logs\LOG02-KAL2-CS-0802" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 64
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB02-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB02-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+sel dis 44
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG02-KAL2-CS-0802
+FORMA FS=NTFS LABEL=LOG02-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB02-KAL2-CS-0802 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB02-KAL2-CS-0802\*  E:\mnt\dbs\DB02-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG02-KAL2-CS-0802\*  E:\mnt\logs\LOG02-KAL2-CS-0802\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB03-KAL2-CS-0802 ***
+ 
+############Step 1 for DB03-KAL2-CS-0802 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB03-KAL2-CS-0802" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB03-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\dbs\DB03-KAL2-CS-0802" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG03-KAL2-CS-0802" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG03-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\logs\LOG03-KAL2-CS-0802" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 65
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB03-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB03-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+sel dis 45
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG03-KAL2-CS-0802
+FORMA FS=NTFS LABEL=LOG03-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB03-KAL2-CS-0802 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB03-KAL2-CS-0802\*  E:\mnt\dbs\DB03-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG03-KAL2-CS-0802\*  E:\mnt\logs\LOG03-KAL2-CS-0802\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB04-KAL2-CS-0802 ***
+ 
+############Step 1 for DB04-KAL2-CS-0802 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB04-KAL2-CS-0802" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB04-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\dbs\DB04-KAL2-CS-0802" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG04-KAL2-CS-0802" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG04-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\logs\LOG04-KAL2-CS-0802" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 66
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB04-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB04-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+sel dis 46
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG04-KAL2-CS-0802
+FORMA FS=NTFS LABEL=LOG04-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB04-KAL2-CS-0802 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB04-KAL2-CS-0802\*  E:\mnt\dbs\DB04-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG04-KAL2-CS-0802\*  E:\mnt\logs\LOG04-KAL2-CS-0802\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB05-KAL2-CS-0802 ***
+ 
+############Step 1 for DB05-KAL2-CS-0802 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB05-KAL2-CS-0802" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB05-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\dbs\DB05-KAL2-CS-0802" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG05-KAL2-CS-0802" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG05-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\logs\LOG05-KAL2-CS-0802" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 67
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB05-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB05-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+sel dis 47
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG05-KAL2-CS-0802
+FORMA FS=NTFS LABEL=LOG05-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB05-KAL2-CS-0802 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB05-KAL2-CS-0802\*  E:\mnt\dbs\DB05-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG05-KAL2-CS-0802\*  E:\mnt\logs\LOG05-KAL2-CS-0802\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB06-KAL2-CS-0802 ***
+ 
+############Step 1 for DB06-KAL2-CS-0802 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB06-KAL2-CS-0802" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB06-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\dbs\DB06-KAL2-CS-0802" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG06-KAL2-CS-0802" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG06-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\logs\LOG06-KAL2-CS-0802" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 68
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB06-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB06-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+sel dis 48
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG06-KAL2-CS-0802
+FORMA FS=NTFS LABEL=LOG06-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB06-KAL2-CS-0802 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB06-KAL2-CS-0802\*  E:\mnt\dbs\DB06-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG06-KAL2-CS-0802\*  E:\mnt\logs\LOG06-KAL2-CS-0802\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB07-KAL2-CS-0802 ***
+ 
+############Step 1 for DB07-KAL2-CS-0802 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB07-KAL2-CS-0802" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB07-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\dbs\DB07-KAL2-CS-0802" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG07-KAL2-CS-0802" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG07-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\logs\LOG07-KAL2-CS-0802" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 69
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB07-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB07-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+sel dis 49
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG07-KAL2-CS-0802
+FORMA FS=NTFS LABEL=LOG07-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB07-KAL2-CS-0802 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB07-KAL2-CS-0802\*  E:\mnt\dbs\DB07-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG07-KAL2-CS-0802\*  E:\mnt\logs\LOG07-KAL2-CS-0802\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB08-KAL2-CS-0802 ***
+ 
+############Step 1 for DB08-KAL2-CS-0802 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB08-KAL2-CS-0802" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB08-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\dbs\DB08-KAL2-CS-0802" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG08-KAL2-CS-0802" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG08-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\logs\LOG08-KAL2-CS-0802" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 70
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB08-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB08-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+sel dis 50
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG08-KAL2-CS-0802
+FORMA FS=NTFS LABEL=LOG08-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB08-KAL2-CS-0802 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB08-KAL2-CS-0802\*  E:\mnt\dbs\DB08-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG08-KAL2-CS-0802\*  E:\mnt\logs\LOG08-KAL2-CS-0802\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB09-KAL2-CS-0802 ***
+ 
+############Step 1 for DB09-KAL2-CS-0802 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB09-KAL2-CS-0802" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB09-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\dbs\DB09-KAL2-CS-0802" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG09-KAL2-CS-0802" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG09-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\logs\LOG09-KAL2-CS-0802" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 71
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB09-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB09-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+sel dis 51
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG09-KAL2-CS-0802
+FORMA FS=NTFS LABEL=LOG09-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB09-KAL2-CS-0802 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB09-KAL2-CS-0802\*  E:\mnt\dbs\DB09-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG09-KAL2-CS-0802\*  E:\mnt\logs\LOG09-KAL2-CS-0802\ -verbose -recurse
+ 
+-----------------------------------------------------------------------------
+ ** Instructions for Database DB10-KAL2-CS-0802 ***
+ 
+############Step 1 for DB10-KAL2-CS-0802 ( remount old log and db Volumes) 
+ 
+$My_dbvol = mountvol "E:\mnt\dbs\DB10-KAL2-CS-0802" /L
+$My_dbvol = $My_dbvol -replace " "
+mountvol "E:\mnt\dbs\DB10-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\dbs\DB10-KAL2-CS-0802" $My_dbvol
+$My_logvol = mountvol "E:\mnt\logs\LOG10-KAL2-CS-0802" /L
+$My_logvol = $My_logvol -replace " "
+mountvol "E:\mnt\logs\LOG10-KAL2-CS-0802" /D
+mountvol "E:\mnt_old\logs\LOG10-KAL2-CS-0802" $My_logvol
+ 
+############Step 2 Diskpart for log and database
+ 
+sel dis 72
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB10-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB10-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+sel dis 52
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\logs\LOG10-KAL2-CS-0802
+FORMA FS=NTFS LABEL=LOG10-KAL2-CS-0802(VNX) UNIT=64k QUICK
+ 
+############Step 3 copy DB10-KAL2-CS-0802 ( copy db and log files) 
+ 
+copy-item -Path E:\mnt_old\dbs\DB10-KAL2-CS-0802\*  E:\mnt\dbs\DB10-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG10-KAL2-CS-0802\*  E:\mnt\logs\LOG10-KAL2-CS-0802\ -verbose -recurse
+ 
