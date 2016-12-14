@@ -1,8 +1,9 @@
-﻿
+﻿$line = "-----------------------------------------------------------------------------"
 $Serverprefix1 = "-KAL2-CS-0802"
 $Serverprefix2 = "-FA27-CS-0802"
 
 $counter = 1 
+$mastercontent = @()
 foreach ($DBcount in (1..10))
     {
     $logoffset = 42
@@ -35,27 +36,45 @@ foreach ($DBcount in (1..10))
     $diskpart_content_log | Set-Content -Path ".\logdisk$logdisk.txt"
     
     
-     $content = @()
+     $log_mountvol_content = @()
     ###  create unmount scripts
-     $content += "`$My_logvol = mountvol `"E:\mnt\logs\$LOG`" /L"
-     $content += "`$My_logvol = `$My_logvol -replace `" `""
-     $content += "mountvol `"E:\mnt\logs\$LOG`" /D"
-     $content += "mountvol `"E:\mnt_old\logs\$LOG`" `$My_logvol"
-     $content  | set-content ".\remount_$log.ps1"
+     $log_mountvol_content += "`$My_logvol = mountvol `"E:\mnt\logs\$LOG`" /L"
+     $log_mountvol_content += "`$My_logvol = `$My_logvol -replace `" `""
+     $log_mountvol_content += "mountvol `"E:\mnt\logs\$LOG`" /D"
+     $log_mountvol_content += "mountvol `"E:\mnt_old\logs\$LOG`" `$My_logvol"
+     $log_mountvol_content  | set-content ".\remount_$log.ps1"
     
-         $content = @()
+    $db_mountvol_content = @()
     ###  create unmount scripts
-     $content += "`$My_dbvol = mountvol `"E:\mnt\dbs\$db`" /L"
-     $content += "`$My_dbvol = `$My_dbvol -replace `" `""
-     $content += "mountvol `"E:\mnt\dbs\$db`" /D"
-     $content += "mountvol `"E:\mnt_old\dbs\$db`" `$My_dbvol"
-     $content  | set-content ".\remount_$db.ps1"
+     $db_mountvol_content += "`$My_dbvol = mountvol `"E:\mnt\dbs\$db`" /L"
+     $db_mountvol_content += "`$My_dbvol = `$My_dbvol -replace `" `""
+     $db_mountvol_content += "mountvol `"E:\mnt\dbs\$db`" /D"
+     $db_mountvol_content += "mountvol `"E:\mnt_old\dbs\$db`" `$My_dbvol"
+     $db_mountvol_content  | set-content ".\remount_$db.ps1"
     
-    
-    
+    $mastercontent += $line
+    $mastercontent += " ** Instructions for Database $db ***"
+    $mastercontent += " "
+    $mastercontent += "############Step 1 for $db ( remount old log and db Volumes) "
+    $mastercontent += " "
+    $mastercontent += $db_mountvol_content
+    $mastercontent += $log_mountvol_content
+    $mastercontent += " "
+    $mastercontent += "############Step 2 Diskpart for log and database"
+    $mastercontent += " "
+    $mastercontent += $diskpart_content_d
+    $mastercontent += " "
+    $mastercontent += $diskpart_content_log
+    $mastercontent += " "
+    $mastercontent += "############Step 3 copy $db ( copy db and log files) "
+    $mastercontent += " "    
+    $mastercontent += "copy-item -Path E:\mnt_old\dbs\$db\  E:\mnt\dbs\$db -verbose -recurse"
+    $mastercontent += "copy-item -Path E:\mnt_old\logs\$LOG\  E:\mnt\logs\$LOG -verbose -recurse"
+    $mastercontent += " "
     $counter ++
     }
 
 
+    $mastercontent | Set-Content ".\Migration_Instructions.txt"
 
 
