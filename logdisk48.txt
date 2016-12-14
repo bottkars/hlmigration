@@ -1,0 +1,6 @@
+sel dis 48
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mntlogs\LOG06-KAL2-CS-0802
+FORMA FS=NTFS LABEL=LOG06-KAL2-CS-0802(VNX) UNIT=64k QUICK

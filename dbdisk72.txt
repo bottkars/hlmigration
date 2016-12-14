@@ -1,0 +1,6 @@
+sel dis 72
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB10-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB10-KAL2-CS-0802(VNX) UNIT=64k QUICK
