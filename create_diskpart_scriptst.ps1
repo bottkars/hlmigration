@@ -30,21 +30,19 @@ foreach ($DBcount in (1..10))
     $diskpart_content_log += "online dis"
     $diskpart_content_log += "attrib dis clear readonly"
     $diskpart_content_log += "cre par pri"
-    $diskpart_content_log += "assign mount=E:\mntlogs\$LOG"
+    $diskpart_content_log += "assign mount=E:\mnt\logs\$LOG"
     $diskpart_content_log += "FORMA FS=NTFS LABEL=$LOG(VNX) UNIT=64k QUICK"
     $diskpart_content_log | Set-Content -Path ".\logdisk$logdisk.txt"
-
     $counter ++
+    
+
+    ###  create unmount scripts
+     $My_logvol = mountvol 
+
+
+
     }
 
 
 
-    
 
-$diskpart_content = @()
-$content += "sel dis $dis"
-$content += "online dis"
-$content += "attrib dis clear readonly"
-$content += "cre par pri"
-$content += "assign mount=c:\test"
-$content += "FORMAT FS=NTFS LABEL=LABEL UNIT=64k QUICK"

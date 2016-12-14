@@ -2,5 +2,5 @@ sel dis 43
 online dis
 attrib dis clear readonly
 cre par pri
-assign mount=E:\mntlogs\LOG01-KAL2-CS-0802
+assign mount=E:\mnt\logs\LOG01-KAL2-CS-0802
 FORMA FS=NTFS LABEL=LOG01-KAL2-CS-0802(VNX) UNIT=64k QUICK
