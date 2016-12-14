@@ -4,6 +4,7 @@ $Serverprefix2 = "-FA27-CS-0801"
 $logoffset = 43
 $dboffset = 63
 $mastercontent = @()
+$Dismount_allcontent = @()
 foreach ($DBcount in (1..10))
     {
     $DBNUM = "{0:D2}" -f $DBcount
@@ -50,6 +51,9 @@ foreach ($DBcount in (1..10))
      $db_mountvol_content += "mountvol `"E:\mnt_old\dbs\$db`" `$My_dbvol"
      $db_mountvol_content  | set-content ".\remount_$db.ps1"
     
+
+
+
     $mastercontent += "<--- Instruction Start"
     $mastercontent += $line
     $mastercontent += " ** Instructions for Database $db ***"
@@ -74,6 +78,10 @@ foreach ($DBcount in (1..10))
     $mastercontent += "`$StopWatch"
     $mastercontent += " "
     $mastercontent += "Instruction End --->"
+    $Dismount_allcontent += "mountvol `"E:\mnt_old\logs\$LOG`" /D"
+    $Dismount_allcontent += "mountvol `"E:\mnt_old\dbs\$DB`" /D"
+    
+    
     $dboffset ++
     $logoffset ++
     }
@@ -152,8 +160,11 @@ foreach ($DBcount in (1..10))
     $mastercontent += "`$StopWatch.Stop()"
     $mastercontent += "`$StopWatch"
     $mastercontent += " "
+    $Dismount_allcontent += "mountvol `"E:\mnt_old\logs\$LOG`" /D"
+    $Dismount_allcontent += "mountvol `"E:\mnt_old\dbs\$DB`" /D"
     $mastercontent += "Instruction End --->"
     $dboffset ++
     $logoffset ++
     }
     $mastercontent | Set-Content "Instructions for $Serverprefix2.txt"
+    $Dismount_allcontent | Set-Content "Instructions for_dismount.txt"
