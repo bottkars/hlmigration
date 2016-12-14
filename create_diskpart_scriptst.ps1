@@ -50,6 +50,7 @@ foreach ($DBcount in (1..10))
      $db_mountvol_content += "mountvol `"E:\mnt_old\dbs\$db`" `$My_dbvol"
      $db_mountvol_content  | set-content ".\remount_$db.ps1"
     
+    $mastercontent += "<--- Instruction Start"
     $mastercontent += $line
     $mastercontent += " ** Instructions for Database $db ***"
     $mastercontent += " "
@@ -69,6 +70,7 @@ foreach ($DBcount in (1..10))
     $mastercontent += "copy-item -Path E:\mnt_old\dbs\$db\*  E:\mnt\dbs\$db\ -verbose -recurse"
     $mastercontent += "copy-item -Path E:\mnt_old\logs\$LOG\*  E:\mnt\logs\$LOG\ -verbose -recurse"
     $mastercontent += " "
+    $mastercontent += "Instruction End --->"
     $dboffset ++
     $logoffset ++
     }
@@ -124,6 +126,7 @@ foreach ($DBcount in (1..10))
      $db_mountvol_content += "mountvol `"E:\mnt_old\dbs\$db`" `$My_dbvol"
      $db_mountvol_content  | set-content ".\remount_$db.ps1"
     
+    $mastercontent += "<--- Instruction Start"
     $mastercontent += $line
     $mastercontent += " ** Instructions for Database $db ***"
     $mastercontent += " "
@@ -143,6 +146,7 @@ foreach ($DBcount in (1..10))
     $mastercontent += "copy-item -Path E:\mnt_old\dbs\$db\*  E:\mnt\dbs\$db\ -verbose -recurse"
     $mastercontent += "copy-item -Path E:\mnt_old\logs\$LOG\*  E:\mnt\logs\$LOG\ -verbose -recurse"
     $mastercontent += " "
+    $mastercontent += "Instruction End --->"
     $dboffset ++
     $logoffset ++
     }
