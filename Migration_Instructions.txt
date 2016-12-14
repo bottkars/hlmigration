@@ -30,8 +30,8 @@ FORMA FS=NTFS LABEL=LOG01-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 ############Step 3 copy DB01-KAL2-CS-0802 ( copy db and log files) 
  
-copy-item -Path E:\mnt_old\dbs\DB01-KAL2-CS-0802\  E:\mnt\dbs\DB01-KAL2-CS-0802 -verbose -recurse
-copy-item -Path E:\mnt_old\logs\LOG01-KAL2-CS-0802\  E:\mnt\logs\LOG01-KAL2-CS-0802 -verbose -recurse
+copy-item -Path E:\mnt_old\dbs\DB01-KAL2-CS-0802\*  E:\mnt\dbs\DB01-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG01-KAL2-CS-0802\*  E:\mnt\logs\LOG01-KAL2-CS-0802\ -verbose -recurse
  
 -----------------------------------------------------------------------------
  ** Instructions for Database DB02-KAL2-CS-0802 ***
@@ -65,8 +65,8 @@ FORMA FS=NTFS LABEL=LOG02-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 ############Step 3 copy DB02-KAL2-CS-0802 ( copy db and log files) 
  
-copy-item -Path E:\mnt_old\dbs\DB02-KAL2-CS-0802\  E:\mnt\dbs\DB02-KAL2-CS-0802 -verbose -recurse
-copy-item -Path E:\mnt_old\logs\LOG02-KAL2-CS-0802\  E:\mnt\logs\LOG02-KAL2-CS-0802 -verbose -recurse
+copy-item -Path E:\mnt_old\dbs\DB02-KAL2-CS-0802\*  E:\mnt\dbs\DB02-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG02-KAL2-CS-0802\*  E:\mnt\logs\LOG02-KAL2-CS-0802\ -verbose -recurse
  
 -----------------------------------------------------------------------------
  ** Instructions for Database DB03-KAL2-CS-0802 ***
@@ -100,8 +100,8 @@ FORMA FS=NTFS LABEL=LOG03-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 ############Step 3 copy DB03-KAL2-CS-0802 ( copy db and log files) 
  
-copy-item -Path E:\mnt_old\dbs\DB03-KAL2-CS-0802\  E:\mnt\dbs\DB03-KAL2-CS-0802 -verbose -recurse
-copy-item -Path E:\mnt_old\logs\LOG03-KAL2-CS-0802\  E:\mnt\logs\LOG03-KAL2-CS-0802 -verbose -recurse
+copy-item -Path E:\mnt_old\dbs\DB03-KAL2-CS-0802\*  E:\mnt\dbs\DB03-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG03-KAL2-CS-0802\*  E:\mnt\logs\LOG03-KAL2-CS-0802\ -verbose -recurse
  
 -----------------------------------------------------------------------------
  ** Instructions for Database DB04-KAL2-CS-0802 ***
@@ -135,8 +135,8 @@ FORMA FS=NTFS LABEL=LOG04-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 ############Step 3 copy DB04-KAL2-CS-0802 ( copy db and log files) 
  
-copy-item -Path E:\mnt_old\dbs\DB04-KAL2-CS-0802\  E:\mnt\dbs\DB04-KAL2-CS-0802 -verbose -recurse
-copy-item -Path E:\mnt_old\logs\LOG04-KAL2-CS-0802\  E:\mnt\logs\LOG04-KAL2-CS-0802 -verbose -recurse
+copy-item -Path E:\mnt_old\dbs\DB04-KAL2-CS-0802\*  E:\mnt\dbs\DB04-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG04-KAL2-CS-0802\*  E:\mnt\logs\LOG04-KAL2-CS-0802\ -verbose -recurse
  
 -----------------------------------------------------------------------------
  ** Instructions for Database DB05-KAL2-CS-0802 ***
@@ -170,8 +170,8 @@ FORMA FS=NTFS LABEL=LOG05-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 ############Step 3 copy DB05-KAL2-CS-0802 ( copy db and log files) 
  
-copy-item -Path E:\mnt_old\dbs\DB05-KAL2-CS-0802\  E:\mnt\dbs\DB05-KAL2-CS-0802 -verbose -recurse
-copy-item -Path E:\mnt_old\logs\LOG05-KAL2-CS-0802\  E:\mnt\logs\LOG05-KAL2-CS-0802 -verbose -recurse
+copy-item -Path E:\mnt_old\dbs\DB05-KAL2-CS-0802\*  E:\mnt\dbs\DB05-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG05-KAL2-CS-0802\*  E:\mnt\logs\LOG05-KAL2-CS-0802\ -verbose -recurse
  
 -----------------------------------------------------------------------------
  ** Instructions for Database DB06-KAL2-CS-0802 ***
@@ -205,8 +205,8 @@ FORMA FS=NTFS LABEL=LOG06-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 ############Step 3 copy DB06-KAL2-CS-0802 ( copy db and log files) 
  
-copy-item -Path E:\mnt_old\dbs\DB06-KAL2-CS-0802\  E:\mnt\dbs\DB06-KAL2-CS-0802 -verbose -recurse
-copy-item -Path E:\mnt_old\logs\LOG06-KAL2-CS-0802\  E:\mnt\logs\LOG06-KAL2-CS-0802 -verbose -recurse
+copy-item -Path E:\mnt_old\dbs\DB06-KAL2-CS-0802\*  E:\mnt\dbs\DB06-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG06-KAL2-CS-0802\*  E:\mnt\logs\LOG06-KAL2-CS-0802\ -verbose -recurse
  
 -----------------------------------------------------------------------------
  ** Instructions for Database DB07-KAL2-CS-0802 ***
@@ -240,8 +240,8 @@ FORMA FS=NTFS LABEL=LOG07-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 ############Step 3 copy DB07-KAL2-CS-0802 ( copy db and log files) 
  
-copy-item -Path E:\mnt_old\dbs\DB07-KAL2-CS-0802\  E:\mnt\dbs\DB07-KAL2-CS-0802 -verbose -recurse
-copy-item -Path E:\mnt_old\logs\LOG07-KAL2-CS-0802\  E:\mnt\logs\LOG07-KAL2-CS-0802 -verbose -recurse
+copy-item -Path E:\mnt_old\dbs\DB07-KAL2-CS-0802\*  E:\mnt\dbs\DB07-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG07-KAL2-CS-0802\*  E:\mnt\logs\LOG07-KAL2-CS-0802\ -verbose -recurse
  
 -----------------------------------------------------------------------------
  ** Instructions for Database DB08-KAL2-CS-0802 ***
@@ -275,8 +275,8 @@ FORMA FS=NTFS LABEL=LOG08-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 ############Step 3 copy DB08-KAL2-CS-0802 ( copy db and log files) 
  
-copy-item -Path E:\mnt_old\dbs\DB08-KAL2-CS-0802\  E:\mnt\dbs\DB08-KAL2-CS-0802 -verbose -recurse
-copy-item -Path E:\mnt_old\logs\LOG08-KAL2-CS-0802\  E:\mnt\logs\LOG08-KAL2-CS-0802 -verbose -recurse
+copy-item -Path E:\mnt_old\dbs\DB08-KAL2-CS-0802\*  E:\mnt\dbs\DB08-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG08-KAL2-CS-0802\*  E:\mnt\logs\LOG08-KAL2-CS-0802\ -verbose -recurse
  
 -----------------------------------------------------------------------------
  ** Instructions for Database DB09-KAL2-CS-0802 ***
@@ -310,8 +310,8 @@ FORMA FS=NTFS LABEL=LOG09-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 ############Step 3 copy DB09-KAL2-CS-0802 ( copy db and log files) 
  
-copy-item -Path E:\mnt_old\dbs\DB09-KAL2-CS-0802\  E:\mnt\dbs\DB09-KAL2-CS-0802 -verbose -recurse
-copy-item -Path E:\mnt_old\logs\LOG09-KAL2-CS-0802\  E:\mnt\logs\LOG09-KAL2-CS-0802 -verbose -recurse
+copy-item -Path E:\mnt_old\dbs\DB09-KAL2-CS-0802\*  E:\mnt\dbs\DB09-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG09-KAL2-CS-0802\*  E:\mnt\logs\LOG09-KAL2-CS-0802\ -verbose -recurse
  
 -----------------------------------------------------------------------------
  ** Instructions for Database DB10-KAL2-CS-0802 ***
@@ -345,6 +345,6 @@ FORMA FS=NTFS LABEL=LOG10-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 ############Step 3 copy DB10-KAL2-CS-0802 ( copy db and log files) 
  
-copy-item -Path E:\mnt_old\dbs\DB10-KAL2-CS-0802\  E:\mnt\dbs\DB10-KAL2-CS-0802 -verbose -recurse
-copy-item -Path E:\mnt_old\logs\LOG10-KAL2-CS-0802\  E:\mnt\logs\LOG10-KAL2-CS-0802 -verbose -recurse
+copy-item -Path E:\mnt_old\dbs\DB10-KAL2-CS-0802\*  E:\mnt\dbs\DB10-KAL2-CS-0802\ -verbose -recurse
+copy-item -Path E:\mnt_old\logs\LOG10-KAL2-CS-0802\*  E:\mnt\logs\LOG10-KAL2-CS-0802\ -verbose -recurse
  

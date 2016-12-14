@@ -68,8 +68,8 @@ foreach ($DBcount in (1..10))
     $mastercontent += " "
     $mastercontent += "############Step 3 copy $db ( copy db and log files) "
     $mastercontent += " "    
-    $mastercontent += "copy-item -Path E:\mnt_old\dbs\$db\  E:\mnt\dbs\$db -verbose -recurse"
-    $mastercontent += "copy-item -Path E:\mnt_old\logs\$LOG\  E:\mnt\logs\$LOG -verbose -recurse"
+    $mastercontent += "copy-item -Path E:\mnt_old\dbs\$db\*  E:\mnt\dbs\$db\ -verbose -recurse"
+    $mastercontent += "copy-item -Path E:\mnt_old\logs\$LOG\*  E:\mnt\logs\$LOG\ -verbose -recurse"
     $mastercontent += " "
     $counter ++
     }
