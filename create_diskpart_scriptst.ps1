@@ -62,7 +62,7 @@ foreach ($DBcount in (1..10))
     $mastercontent += " "
     $mastercontent += "############Step 2 Diskpart for log and database"
     $mastercontent += " "
-    $mastercontent += $diskpart_content_d
+    $mastercontent += $diskpart_content_db
     $mastercontent += " "
     $mastercontent += $diskpart_content_log
     $mastercontent += " "

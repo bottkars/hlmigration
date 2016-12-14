@@ -14,6 +14,12 @@ mountvol "E:\mnt_old\logs\LOG01-KAL2-CS-0802" $My_logvol
  
 ############Step 2 Diskpart for log and database
  
+sel dis 63
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB01-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB01-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 sel dis 43
 online dis
@@ -43,6 +49,12 @@ mountvol "E:\mnt_old\logs\LOG02-KAL2-CS-0802" $My_logvol
  
 ############Step 2 Diskpart for log and database
  
+sel dis 64
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB02-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB02-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 sel dis 44
 online dis
@@ -72,6 +84,12 @@ mountvol "E:\mnt_old\logs\LOG03-KAL2-CS-0802" $My_logvol
  
 ############Step 2 Diskpart for log and database
  
+sel dis 65
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB03-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB03-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 sel dis 45
 online dis
@@ -101,6 +119,12 @@ mountvol "E:\mnt_old\logs\LOG04-KAL2-CS-0802" $My_logvol
  
 ############Step 2 Diskpart for log and database
  
+sel dis 66
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB04-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB04-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 sel dis 46
 online dis
@@ -130,6 +154,12 @@ mountvol "E:\mnt_old\logs\LOG05-KAL2-CS-0802" $My_logvol
  
 ############Step 2 Diskpart for log and database
  
+sel dis 67
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB05-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB05-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 sel dis 47
 online dis
@@ -159,6 +189,12 @@ mountvol "E:\mnt_old\logs\LOG06-KAL2-CS-0802" $My_logvol
  
 ############Step 2 Diskpart for log and database
  
+sel dis 68
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB06-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB06-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 sel dis 48
 online dis
@@ -188,6 +224,12 @@ mountvol "E:\mnt_old\logs\LOG07-KAL2-CS-0802" $My_logvol
  
 ############Step 2 Diskpart for log and database
  
+sel dis 69
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB07-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB07-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 sel dis 49
 online dis
@@ -217,6 +259,12 @@ mountvol "E:\mnt_old\logs\LOG08-KAL2-CS-0802" $My_logvol
  
 ############Step 2 Diskpart for log and database
  
+sel dis 70
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB08-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB08-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 sel dis 50
 online dis
@@ -246,6 +294,12 @@ mountvol "E:\mnt_old\logs\LOG09-KAL2-CS-0802" $My_logvol
  
 ############Step 2 Diskpart for log and database
  
+sel dis 71
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB09-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB09-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 sel dis 51
 online dis
@@ -275,6 +329,12 @@ mountvol "E:\mnt_old\logs\LOG10-KAL2-CS-0802" $My_logvol
  
 ############Step 2 Diskpart for log and database
  
+sel dis 72
+online dis
+attrib dis clear readonly
+cre par pri
+assign mount=E:\mnt\dbs\DB10-KAL2-CS-0802
+FORMA FS=NTFS LABEL=DB10-KAL2-CS-0802(VNX) UNIT=64k QUICK
  
 sel dis 52
 online dis
