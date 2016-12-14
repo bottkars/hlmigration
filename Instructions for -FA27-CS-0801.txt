@@ -34,7 +34,7 @@ FORMA FS=NTFS LABEL=LOG01-FA27-CS-0801(VNX) UNIT=64k QUICK
 $StopWatch = [System.Diagnostics.Stopwatch]::StartNew()
 copy-item -Path E:\mnt_old\dbs\DB01-FA27-CS-0801\*  E:\mnt\dbs\DB01-FA27-CS-0801\ -verbose -recurse
 copy-item -Path E:\mnt_old\logs\LOG01-FA27-CS-0801\*  E:\mnt\logs\LOG01-FA27-CS-0801\ -verbose -recurse
-$StopWatch = [System.Diagnostics.Stopwatch]::Stop()
+$StopWatch.Stop()
 $StopWatch
  
 Instruction End --->
@@ -74,7 +74,7 @@ FORMA FS=NTFS LABEL=LOG02-FA27-CS-0801(VNX) UNIT=64k QUICK
 $StopWatch = [System.Diagnostics.Stopwatch]::StartNew()
 copy-item -Path E:\mnt_old\dbs\DB02-FA27-CS-0801\*  E:\mnt\dbs\DB02-FA27-CS-0801\ -verbose -recurse
 copy-item -Path E:\mnt_old\logs\LOG02-FA27-CS-0801\*  E:\mnt\logs\LOG02-FA27-CS-0801\ -verbose -recurse
-$StopWatch = [System.Diagnostics.Stopwatch]::Stop()
+$StopWatch.Stop()
 $StopWatch
  
 Instruction End --->
@@ -114,7 +114,7 @@ FORMA FS=NTFS LABEL=LOG03-FA27-CS-0801(VNX) UNIT=64k QUICK
 $StopWatch = [System.Diagnostics.Stopwatch]::StartNew()
 copy-item -Path E:\mnt_old\dbs\DB03-FA27-CS-0801\*  E:\mnt\dbs\DB03-FA27-CS-0801\ -verbose -recurse
 copy-item -Path E:\mnt_old\logs\LOG03-FA27-CS-0801\*  E:\mnt\logs\LOG03-FA27-CS-0801\ -verbose -recurse
-$StopWatch = [System.Diagnostics.Stopwatch]::Stop()
+$StopWatch.Stop()
 $StopWatch
  
 Instruction End --->
@@ -154,7 +154,7 @@ FORMA FS=NTFS LABEL=LOG04-FA27-CS-0801(VNX) UNIT=64k QUICK
 $StopWatch = [System.Diagnostics.Stopwatch]::StartNew()
 copy-item -Path E:\mnt_old\dbs\DB04-FA27-CS-0801\*  E:\mnt\dbs\DB04-FA27-CS-0801\ -verbose -recurse
 copy-item -Path E:\mnt_old\logs\LOG04-FA27-CS-0801\*  E:\mnt\logs\LOG04-FA27-CS-0801\ -verbose -recurse
-$StopWatch = [System.Diagnostics.Stopwatch]::Stop()
+$StopWatch.Stop()
 $StopWatch
  
 Instruction End --->
@@ -194,7 +194,7 @@ FORMA FS=NTFS LABEL=LOG05-FA27-CS-0801(VNX) UNIT=64k QUICK
 $StopWatch = [System.Diagnostics.Stopwatch]::StartNew()
 copy-item -Path E:\mnt_old\dbs\DB05-FA27-CS-0801\*  E:\mnt\dbs\DB05-FA27-CS-0801\ -verbose -recurse
 copy-item -Path E:\mnt_old\logs\LOG05-FA27-CS-0801\*  E:\mnt\logs\LOG05-FA27-CS-0801\ -verbose -recurse
-$StopWatch = [System.Diagnostics.Stopwatch]::Stop()
+$StopWatch.Stop()
 $StopWatch
  
 Instruction End --->
@@ -234,7 +234,7 @@ FORMA FS=NTFS LABEL=LOG06-FA27-CS-0801(VNX) UNIT=64k QUICK
 $StopWatch = [System.Diagnostics.Stopwatch]::StartNew()
 copy-item -Path E:\mnt_old\dbs\DB06-FA27-CS-0801\*  E:\mnt\dbs\DB06-FA27-CS-0801\ -verbose -recurse
 copy-item -Path E:\mnt_old\logs\LOG06-FA27-CS-0801\*  E:\mnt\logs\LOG06-FA27-CS-0801\ -verbose -recurse
-$StopWatch = [System.Diagnostics.Stopwatch]::Stop()
+$StopWatch.Stop()
 $StopWatch
  
 Instruction End --->
@@ -274,7 +274,7 @@ FORMA FS=NTFS LABEL=LOG07-FA27-CS-0801(VNX) UNIT=64k QUICK
 $StopWatch = [System.Diagnostics.Stopwatch]::StartNew()
 copy-item -Path E:\mnt_old\dbs\DB07-FA27-CS-0801\*  E:\mnt\dbs\DB07-FA27-CS-0801\ -verbose -recurse
 copy-item -Path E:\mnt_old\logs\LOG07-FA27-CS-0801\*  E:\mnt\logs\LOG07-FA27-CS-0801\ -verbose -recurse
-$StopWatch = [System.Diagnostics.Stopwatch]::Stop()
+$StopWatch.Stop()
 $StopWatch
  
 Instruction End --->
@@ -314,7 +314,7 @@ FORMA FS=NTFS LABEL=LOG08-FA27-CS-0801(VNX) UNIT=64k QUICK
 $StopWatch = [System.Diagnostics.Stopwatch]::StartNew()
 copy-item -Path E:\mnt_old\dbs\DB08-FA27-CS-0801\*  E:\mnt\dbs\DB08-FA27-CS-0801\ -verbose -recurse
 copy-item -Path E:\mnt_old\logs\LOG08-FA27-CS-0801\*  E:\mnt\logs\LOG08-FA27-CS-0801\ -verbose -recurse
-$StopWatch = [System.Diagnostics.Stopwatch]::Stop()
+$StopWatch.Stop()
 $StopWatch
  
 Instruction End --->
@@ -354,7 +354,7 @@ FORMA FS=NTFS LABEL=LOG09-FA27-CS-0801(VNX) UNIT=64k QUICK
 $StopWatch = [System.Diagnostics.Stopwatch]::StartNew()
 copy-item -Path E:\mnt_old\dbs\DB09-FA27-CS-0801\*  E:\mnt\dbs\DB09-FA27-CS-0801\ -verbose -recurse
 copy-item -Path E:\mnt_old\logs\LOG09-FA27-CS-0801\*  E:\mnt\logs\LOG09-FA27-CS-0801\ -verbose -recurse
-$StopWatch = [System.Diagnostics.Stopwatch]::Stop()
+$StopWatch.Stop()
 $StopWatch
  
 Instruction End --->
@@ -394,7 +394,7 @@ FORMA FS=NTFS LABEL=LOG10-FA27-CS-0801(VNX) UNIT=64k QUICK
 $StopWatch = [System.Diagnostics.Stopwatch]::StartNew()
 copy-item -Path E:\mnt_old\dbs\DB10-FA27-CS-0801\*  E:\mnt\dbs\DB10-FA27-CS-0801\ -verbose -recurse
 copy-item -Path E:\mnt_old\logs\LOG10-FA27-CS-0801\*  E:\mnt\logs\LOG10-FA27-CS-0801\ -verbose -recurse
-$StopWatch = [System.Diagnostics.Stopwatch]::Stop()
+$StopWatch.Stop()
 $StopWatch
  
 Instruction End --->
